@@ -1,0 +1,77 @@
+* {
+    margin: 100;
+    padding: 100;
+    box-sizing: border-box;
+    background-color: #3fb116;
+}
+
+.game-board {
+    width: 80%;
+    height: 500px;
+    border-bottom: 15px solid #3fb116;/*faz isso p saber o espaço que a div está ocupando.*/
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;/*serve para que tudo que saia da delimitação não apareça + na tela*/
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    animation: pipe-animation 1.5s infinite linear;
+}
+.mario {
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+    background:linear-gradient(#c2e8f3, #E0F6FF );
+}
+
+.pula {
+    animation: pula 500ms ease-out;
+}
+
+.clouds{
+   position: absolute;
+   width: 550px; 
+   background: linear-gradient(#87CEEB, #bbe5f0) ;
+   animation: clouds-animation 40s infinite linear;
+}
+
+@keyframes pipe-animation{
+    from{
+        right: -80px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes pula{
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes clouds-animation {
+    from{
+        right: 0%;
+    }
+    to{
+        right: 200%;
+    }
+}
